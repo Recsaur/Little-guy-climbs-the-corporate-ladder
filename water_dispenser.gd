@@ -16,14 +16,18 @@ func _process(delta: float) -> void:
 	if ShakeStrength > 0.0:
 		sprite.position = spriteog + Vector2(randf_range(-ShakeStrength,ShakeStrength),randf_range(-ShakeStrength,ShakeStrength))
 	if Input.is_action_just_pressed("interact") and interactable:
+		AudioController.wat()
+		GameController.showinteract = false
 		ShakeStrength += 1
 		$AnimatedSprite2D.play("default")
 		await $AnimatedSprite2D.animation_finished
 		ShakeStrength -= 1
 		takeable = true
+		GameController.showinteract = true
 		interactable = false
 		#$AnimatedSprite2D.frame = 1
 	if Input.is_action_just_pressed("interact") and takeable:
+		GameController.showinteract = false
 		takeable = false
 		sprite.frame = 0
 		var coffee = coffee.instantiate()
@@ -36,6 +40,7 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player") and not takeable and GameController.nvm:
+		GameController.showinteract = true
 		interactable = true
 		player = body
 	pass # Replace with function body.

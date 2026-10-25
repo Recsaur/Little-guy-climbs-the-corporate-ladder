@@ -6,6 +6,12 @@ var boss3 = false
 var coftask = false
 var nvm = false
 var HoldingRoot = false
+
+var showinteract = false
+
+var PrinterFix = false
+var Shreddable = false
+var bossfinal = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

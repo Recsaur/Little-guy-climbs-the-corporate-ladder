@@ -1,14 +1,17 @@
 [gd_scene format=4 uid="uid://c2dmwvv0rmj4e"]
 
 [ext_resource type="Texture2D" uid="uid://rmy03ab11wr6" path="res://assets/Windows.png" id="1_5vw27"]
+[ext_resource type="Script" uid="uid://c47wxahe8ltyv" path="res://main.gd" id="1_dg77c"]
 [ext_resource type="PackedScene" uid="uid://dxrvp7sh0arn2" path="res://worker.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://nctjwvdstyng" path="res://icon.svg" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://dgurjx1tdkw7e" path="res://boss.tscn" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://cworo72ipqvis" path="res://assets/Luffy.png" id="2_4c57u"]
+[ext_resource type="PackedScene" uid="uid://dgurjx1tdkw7e" path="res://Boss.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://tj8iptgrebjd" path="res://coffee.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cjsdhr2ntjqea" path="res://water_dispenser.tscn" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://c0vghomi633fg" path="res://assets/paperstack.png" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://c2jlv86uvjbap" path="res://assets/floor.png" id="7_272bh"]
 [ext_resource type="Texture2D" uid="uid://btqrkqdsyqmue" path="res://assets/void.png" id="8_kek77"]
+[ext_resource type="Texture2D" uid="uid://ce7m1poi2a1hx" path="res://assets/tableya.png" id="11_efxa6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
 size = Vector2(128, 128)
@@ -24,6 +27,7 @@ texture = ExtResource("7_272bh")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4c57u"]
 texture = ExtResource("8_kek77")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_kek77"]
 physics_layer_0/collision_layer = 1
@@ -31,11 +35,27 @@ sources/0 = SubResource("TileSetAtlasSource_5vw27")
 sources/1 = SubResource("TileSetAtlasSource_4c57u")
 
 [node name="Main" type="Node2D" unique_id=454727389]
+script = ExtResource("1_dg77c")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=43054775]
 position = Vector2(1011, 156)
 scale = Vector2(8.695056, 8.695055)
 texture = ExtResource("1_5vw27")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1746475783]
+position = Vector2(-1609, 156)
+scale = Vector2(8.695056, 8.695055)
+texture = ExtResource("2_4c57u")
+
+[node name="Icon3" type="Sprite2D" parent="." unique_id=1037641251]
+position = Vector2(-4223, 156)
+scale = Vector2(8.695056, 8.695055)
+texture = ExtResource("2_4c57u")
+
+[node name="Tableya" type="Sprite2D" parent="." unique_id=1499269161]
+position = Vector2(-2713.9998, 395)
+scale = Vector2(4.832355, 4.832355)
+texture = ExtResource("11_efxa6")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=683011281]
 position = Vector2(-844.9998, 603.9999)
@@ -50,15 +70,15 @@ scale = Vector2(1.005332, 1)
 texture = ExtResource("2_0xm2m")
 
 [node name="Coffee" parent="." unique_id=1568069950 instance=ExtResource("4_1bvp3")]
-position = Vector2(-2700, 366)
+position = Vector2(-2751, 376)
 scale = Vector2(1.1008686, 1.1008686)
-
-[node name="Worker" parent="." unique_id=1484022933 instance=ExtResource("1_ig7tw")]
-position = Vector2(117, 344)
 
 [node name="WaterDispenser" parent="." unique_id=1527920325 instance=ExtResource("5_lquwl")]
 position = Vector2(-2989, 462)
 scale = Vector2(1.5736802, 1.5736802)
+
+[node name="Worker" parent="." unique_id=1484022933 instance=ExtResource("1_ig7tw")]
+position = Vector2(478, 339)
 
 [node name="PaperStacks" type="Node2D" parent="." unique_id=1742055671]
 

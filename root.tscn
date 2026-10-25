@@ -35,9 +35,9 @@ position = Vector2(1.1920929e-07, 5.684342e-14)
 scale = Vector2(1.71875, 1.71875)
 texture = ExtResource("4_jh1ax")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=645948781 groups=["root"]]
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=2111659645 groups=["blue"]]
 position = Vector2(-6.935813e-08, -3.3072534e-14)
 scale = Vector2(0.58181816, 0.58181816)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=1704345092]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=268919885]
 shape = SubResource("CircleShape2D_twpsu")

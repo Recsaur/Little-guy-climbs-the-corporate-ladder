@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bvi3s867uiaq2"
+path="res://.godot/imported/2_printer.dialogue-6108111f544b8d359d0c5ac9680faa64.tres"
+
+[deps]
+
+source_file="res://2_printer.dialogue"
+dest_files=["res://.godot/imported/2_printer.dialogue-6108111f544b8d359d0c5ac9680faa64.tres"]
+
+[params]
+
+defaults=true

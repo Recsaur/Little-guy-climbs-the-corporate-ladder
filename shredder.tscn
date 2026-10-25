@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://blg4rkrskx1pv"]
+
+[ext_resource type="Script" uid="uid://uusyhp76jrsj" path="res://shredder.gd" id="1_4oj00"]
+[ext_resource type="Texture2D" uid="uid://ck37l28d48ht0" path="res://assets/shredder.png" id="1_bqsve"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4oj00"]
+atlas = ExtResource("1_bqsve")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gaytq"]
+atlas = ExtResource("1_bqsve")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k32dw"]
+atlas = ExtResource("1_bqsve")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yoly"]
+atlas = ExtResource("1_bqsve")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w48ky"]
+atlas = ExtResource("1_bqsve")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3ba0"]
+atlas = ExtResource("1_bqsve")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3eu6"]
+atlas = ExtResource("1_bqsve")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wr2jd"]
+atlas = ExtResource("1_bqsve")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60tls"]
+atlas = ExtResource("1_bqsve")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l8afr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4oj00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gaytq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k32dw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yoly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w48ky")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3ba0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3eu6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wr2jd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60tls")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqsve"]
+
+[node name="Shredder" type="Node2D" unique_id=842212353]
+script = ExtResource("1_4oj00")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1790957627]
+scale = Vector2(4.749984, 4.749984)
+sprite_frames = SubResource("SpriteFrames_l8afr")
+frame = 4
+frame_progress = 0.2836039
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1696763405]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1203049824]
+scale = Vector2(12.421878, 8.568667)
+shape = SubResource("RectangleShape2D_bqsve")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

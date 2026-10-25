@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="LittleGuysClimbsTheCorporateLadder"
-run/main_scene="uid://c2dmwvv0rmj4e"
+run/main_scene="uid://loysoxan3tpo"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,13 @@ config/icon="res://icon.svg"
 
 GameController="*uid://clnbns4gpfmh7"
 DialogueManager="*uid://c3rodes2l3gxb"
+AudioController="*uid://52txui2730vv"
+
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=640
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
@@ -49,7 +56,7 @@ jump={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://1_boss.dialogue", "res://2_boss.dialogue", "res://3_boss.dialogue")
+locale/translations_pot_files=PackedStringArray("res://1_boss.dialogue", "res://2_boss.dialogue", "res://3_boss.dialogue", "res://1_printer.dialogue", "res://2_printer.dialogue", "res://3_printer.dialogue")
 
 [physics]
 

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dud0j8fk0771p" path="res://assets/idle_worker2.png" id="2_mf4wl"]
 [ext_resource type="Texture2D" uid="uid://bajs7fpbu0vyi" path="res://assets/idle_worker3.png" id="3_crjqa"]
 [ext_resource type="Texture2D" uid="uid://rswk3bidjpgh" path="res://assets/idle_worker.png" id="4_4r8qu"]
+[ext_resource type="Texture2D" uid="uid://xcqpbn7nc10n" path="res://assets/eKey.png" id="5_crjqa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8vnpx"]
 radius = 43.0
@@ -41,5 +42,12 @@ autoplay = "default"
 frame_progress = 0.032691758
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=305984257]
+position = Vector2(0, -53)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1771297133]
+z_index = 3
+position = Vector2(0, -153)
+scale = Vector2(2.418838, 2.418838)
+texture = ExtResource("5_crjqa")

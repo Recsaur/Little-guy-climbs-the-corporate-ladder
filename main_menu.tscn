@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://loysoxan3tpo"]
+
+[ext_resource type="Script" uid="uid://dvhrtjxjdvowi" path="res://main_menu.gd" id="1_glbon"]
+[ext_resource type="Texture2D" uid="uid://b3yuo1vvyvixy" path="res://assets/playbuttonu.png" id="2_nlkkf"]
+[ext_resource type="Texture2D" uid="uid://c3rl5n4ip5jts" path="res://assets/playbuttond.png" id="3_qe12f"]
+[ext_resource type="Texture2D" uid="uid://d00qepwhuwuhu" path="res://assets/Corp.png" id="4_8qtwp"]
+[ext_resource type="FontFile" uid="uid://deec7grkwmotr" path="res://audio/GrapeSoda (1).ttf" id="5_dy7ct"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0o4t1"]
+font = ExtResource("5_dy7ct")
+font_size = 36
+font_color = Color(0.1452662, 0.1452662, 0.1452662, 1)
+
+[node name="MainMenu" type="Node2D" unique_id=1409906268]
+script = ExtResource("1_glbon")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=381398174]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(29.942484, 16.572937)
+color = Color(0.9999991, 0.85489035, 0.8242817, 1)
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=251163809]
+offset_left = 569.0
+offset_top = 298.00003
+offset_right = 1617.0
+offset_bottom = 1322.0
+scale = Vector2(0.4111175, 0.4111175)
+texture_normal = ExtResource("2_nlkkf")
+texture_pressed = ExtResource("3_qe12f")
+
+[node name="Corp" type="Sprite2D" parent="." unique_id=1068960725]
+position = Vector2(781, 164.99998)
+scale = Vector2(4.7645717, 4.7645717)
+texture = ExtResource("4_8qtwp")
+
+[node name="Label" type="Label" parent="." unique_id=604668247]
+offset_left = 18.0
+offset_top = 161.0
+offset_right = 681.0
+offset_bottom = 566.0
+text = "WASD to move
+E to Interact
+
+Credits:
+Recsuar - Programmer, Player Art
+NotDoodlez - BG Art,
+IbiAhmed - Lead Art, BG Art
+FlashLemon - Sound Design"
+label_settings = SubResource("LabelSettings_0o4t1")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dqnvqq1h2fb0x"]
+
+[ext_resource type="FontFile" uid="uid://deec7grkwmotr" path="res://audio/GrapeSoda (1).ttf" id="1_fsb5k"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dmh3q"]
+font = ExtResource("1_fsb5k")
+font_size = 64
+font_color = Color(0.06469653, 0.06469653, 0.06469653, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_iggq8"]
+font = ExtResource("1_fsb5k")
+font_size = 128
+font_color = Color(0.06469653, 0.06469653, 0.06469653, 1)
+
+[node name="Node2D" type="Node2D" unique_id=721082347]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1293889261]
+offset_right = 1157.0
+offset_bottom = 649.0
+color = Color(0.97106355, 0.9266629, 0.8969469, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1976709002]
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 1112.0
+offset_bottom = 381.0
+text = "Basically, AI took over your job and 
+now you gotta stay the little guy, 
+can't climb the corporate ladder no 
+more bud..."
+label_settings = SubResource("LabelSettings_dmh3q")
+
+[node name="Label2" type="Label" parent="." unique_id=1618012380]
+offset_left = 489.0
+offset_top = 499.0
+offset_right = 1593.0
+offset_bottom = 860.0
+text = "THE END
+"
+label_settings = SubResource("LabelSettings_iggq8")

@@ -9,7 +9,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uytt6"]
 size = Vector2(40.48075, 41.322548)
 
-[node name="Wires" type="Node2D" unique_id=38574379]
+[node name="Wires" type="CanvasLayer" unique_id=1421621529]
 script = ExtResource("1_gw8pa")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=281300569]

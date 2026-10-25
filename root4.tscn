@@ -10,7 +10,7 @@
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_twpsu"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_7bdba"]
 radius = 27.166155
 
 [node name="Root" type="Node2D" unique_id=632057737 groups=["yellow"]]
@@ -35,9 +35,9 @@ position = Vector2(1.1920929e-07, 5.684342e-14)
 scale = Vector2(1.71875, 1.71875)
 texture = ExtResource("3_lijme")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=645948781 groups=["root"]]
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=42898633 groups=["yellow"]]
 position = Vector2(-6.935813e-08, -3.3072534e-14)
 scale = Vector2(0.58181816, 0.58181816)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=1704345092]
-shape = SubResource("CircleShape2D_twpsu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=875946037]
+shape = SubResource("CircleShape2D_7bdba")

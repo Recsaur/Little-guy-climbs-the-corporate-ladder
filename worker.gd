@@ -7,6 +7,11 @@ const JUMP_VELOCITY = -550.0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
+	if GameController.showinteract:
+		$Sprite2D2.show()
+	else:
+		$Sprite2D2.hide()
+	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 

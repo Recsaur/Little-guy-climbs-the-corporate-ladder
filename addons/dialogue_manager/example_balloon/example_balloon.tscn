@@ -120,7 +120,7 @@ scale = Vector2(7.3076925, 7.3076925)
 texture = ExtResource("4_nlsx6")
 
 [node name="Lowertextcontatin" type="Sprite2D" parent="Balloon/Lowertextcontatin" unique_id=556129758]
-position = Vector2(68.69473, 5.662441e-07)
+position = Vector2(41.87368, 5.662441e-07)
 texture = ExtResource("4_nlsx6")
 region_enabled = true
 region_rect = Rect2(7.6369476, 0, 72.36305, 26)
@@ -146,7 +146,7 @@ anchors_preset = 0
 anchor_right = 0.0
 offset_left = 91.0
 offset_top = 494.0
-offset_right = 1093.0
+offset_right = 828.0
 offset_bottom = 615.0
 grow_horizontal = 1
 size_flags_vertical = 3

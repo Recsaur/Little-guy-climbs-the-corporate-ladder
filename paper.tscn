@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b7x0niw01ltaa"]
+
+[ext_resource type="Texture2D" uid="uid://ckvu22ehic77p" path="res://assets/printedpaper.png" id="1_pugg3"]
+
+[node name="Paper" type="Sprite2D" unique_id=1848185098]
+position = Vector2(3.9339066e-06, -18.999992)
+scale = Vector2(4.5937495, 4.5937495)
+texture = ExtResource("1_pugg3")

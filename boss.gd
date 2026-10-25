@@ -2,6 +2,7 @@ extends Node2D
 var talkable = false
 var player = null
 var OGPlayerCamPos = null
+var PrinterRoom = load("res://printer_room.tscn")
 
 @export var dialogue1: DialogueResource
 @export var dialogue2: DialogueResource
@@ -59,9 +60,11 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			DialogueManager.show_dialogue_balloon(dialogue3)
 			await DialogueManager.dialogue_ended
 			body.get_node("watercup").queue_free()
+			GameController.PlayerMove = true
 			#GameController.nvm = false
 			#GameController.boss1 = false
 			#GameController.PlayerMove = true
+			get_tree().change_scene_to_packed(PrinterRoom)
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
