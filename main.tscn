@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c2dmwvv0rmj4e"]
+
+[ext_resource type="PackedScene" uid="uid://dxrvp7sh0arn2" path="res://worker.tscn" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://nctjwvdstyng" path="res://icon.svg" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://dgurjx1tdkw7e" path="res://boss.tscn" id="3_h2yge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(128, 128)
+
+[node name="Main" type="Node2D" unique_id=454727389]
+
+[node name="Worker" parent="." unique_id=1484022933 instance=ExtResource("1_ig7tw")]
+position = Vector2(117, 344)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=683011281]
+position = Vector2(589, 588.99994)
+scale = Vector2(11.050453, 1.1081398)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=267898697]
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1371167552]
+texture = ExtResource("2_0xm2m")
+
+[node name="Boss" parent="." unique_id=1731412138 instance=ExtResource("3_h2yge")]
+position = Vector2(948, 371)
