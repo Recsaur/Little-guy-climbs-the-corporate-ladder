@@ -1,0 +1,492 @@
+[gd_scene format=4 uid="uid://dq2q1huwnrq1a"]
+
+[ext_resource type="Texture2D" uid="uid://nctjwvdstyng" path="res://icon.svg" id="1_p5dh6"]
+[ext_resource type="PackedScene" uid="uid://tj8iptgrebjd" path="res://coffee.tscn" id="2_70i1w"]
+[ext_resource type="PackedScene" uid="uid://dxrvp7sh0arn2" path="res://worker.tscn" id="3_ur5dh"]
+[ext_resource type="PackedScene" uid="uid://cjsdhr2ntjqea" path="res://water_dispenser.tscn" id="4_ou2bn"]
+[ext_resource type="Texture2D" uid="uid://c0vghomi633fg" path="res://assets/paperstack.png" id="5_gkyhe"]
+[ext_resource type="Texture2D" uid="uid://c2jlv86uvjbap" path="res://assets/floor.png" id="6_rabm5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_272bh"]
+size = Vector2(102.5, 132)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5vw27"]
+texture = ExtResource("6_rabm5")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_kek77"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_5vw27")
+
+[node name="PrinterRoom" type="Node2D" unique_id=454727389]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=43054775]
+position = Vector2(530.0001, 212.5)
+scale = Vector2(20.109377, 8.4453125)
+texture = ExtResource("1_p5dh6")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=683011281]
+position = Vector2(-844.9998, 603.9999)
+scale = Vector2(38.74051, 0.90848535)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=267898697]
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1371167552]
+position = Vector2(-0.18097782, 0)
+scale = Vector2(1.005332, 1)
+texture = ExtResource("1_p5dh6")
+
+[node name="Coffee" parent="." unique_id=1568069950 instance=ExtResource("2_70i1w")]
+position = Vector2(-2700, 366)
+scale = Vector2(1.1008686, 1.1008686)
+
+[node name="Worker" parent="." unique_id=1484022933 instance=ExtResource("3_ur5dh")]
+position = Vector2(117, 344)
+
+[node name="WaterDispenser" parent="." unique_id=1527920325 instance=ExtResource("4_ou2bn")]
+position = Vector2(-2989, 462)
+scale = Vector2(1.5736802, 1.5736802)
+
+[node name="PaperStacks" type="Node2D" parent="." unique_id=1742055671]
+
+[node name="ps" type="StaticBody2D" parent="PaperStacks" unique_id=691961488]
+position = Vector2(-1060, 348)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps" unique_id=1138071219]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps" unique_id=750567836]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps2" type="StaticBody2D" parent="PaperStacks" unique_id=1036387194]
+position = Vector2(-1060, 222)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps2" unique_id=1061933995]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps2" unique_id=322160380]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps3" type="StaticBody2D" parent="PaperStacks" unique_id=2016036887]
+position = Vector2(-1064, 96)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps3" unique_id=1219609515]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps3" unique_id=619951756]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps4" type="StaticBody2D" parent="PaperStacks" unique_id=687160858]
+position = Vector2(-1731, 358)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps4" unique_id=1651372436]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps4" unique_id=995209414]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps5" type="StaticBody2D" parent="PaperStacks" unique_id=5314540]
+position = Vector2(-1423, 485)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps5" unique_id=1540507095]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps5" unique_id=978515705]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps6" type="StaticBody2D" parent="PaperStacks" unique_id=1909328845]
+position = Vector2(-1788, 487)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps6" unique_id=49659337]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps6" unique_id=116879700]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps7" type="StaticBody2D" parent="PaperStacks" unique_id=2045322526]
+position = Vector2(-1301, 488)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps7" unique_id=1016494046]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps7" unique_id=1417211729]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps8" type="StaticBody2D" parent="PaperStacks" unique_id=1317542252]
+position = Vector2(-1301, 362)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps8" unique_id=1210359393]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps8" unique_id=932479232]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps9" type="StaticBody2D" parent="PaperStacks" unique_id=1946107099]
+position = Vector2(-1305, 236)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps9" unique_id=2079971244]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps9" unique_id=331001507]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps10" type="StaticBody2D" parent="PaperStacks" unique_id=355796472]
+position = Vector2(-1544, 488)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps10" unique_id=1754790324]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps10" unique_id=1749504640]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps11" type="StaticBody2D" parent="PaperStacks" unique_id=1898076351]
+position = Vector2(-1544, 362)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps11" unique_id=962782582]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps11" unique_id=541683201]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps12" type="StaticBody2D" parent="PaperStacks" unique_id=920071311]
+position = Vector2(-1668, 486)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps12" unique_id=1530164687]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps12" unique_id=920680402]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps13" type="StaticBody2D" parent="PaperStacks" unique_id=1409022078]
+position = Vector2(-1056, 488)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps13" unique_id=1101600620]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps13" unique_id=284857878]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps14" type="StaticBody2D" parent="PaperStacks" unique_id=64884244]
+position = Vector2(-1188, 362)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps14" unique_id=1810173973]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps14" unique_id=846472005]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps15" type="StaticBody2D" parent="PaperStacks" unique_id=1856894733]
+position = Vector2(-1180, 486)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps15" unique_id=1626052677]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps15" unique_id=1777322601]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps16" type="StaticBody2D" parent="PaperStacks" unique_id=1712441838]
+position = Vector2(-2465, 487)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps16" unique_id=619198976]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps16" unique_id=1184450011]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps17" type="StaticBody2D" parent="PaperStacks" unique_id=1560440094]
+position = Vector2(-2363, 488)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps17" unique_id=1436106193]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps17" unique_id=1468702170]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps18" type="StaticBody2D" parent="PaperStacks" unique_id=2120666170]
+position = Vector2(-2408, 362)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps18" unique_id=976443946]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps18" unique_id=1198372472]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps19" type="StaticBody2D" parent="PaperStacks" unique_id=1370875070]
+position = Vector2(477, 348)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps19" unique_id=868313406]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps19" unique_id=1222456789]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps20" type="StaticBody2D" parent="PaperStacks" unique_id=1348483167]
+position = Vector2(477, 222)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps20" unique_id=1175821722]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps20" unique_id=133406336]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps21" type="StaticBody2D" parent="PaperStacks" unique_id=1413660090]
+position = Vector2(473, 96)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps21" unique_id=121111438]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps21" unique_id=19047493]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps22" type="StaticBody2D" parent="PaperStacks" unique_id=28723211]
+position = Vector2(664, 358)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps22" unique_id=648961515]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps22" unique_id=1247424718]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps23" type="StaticBody2D" parent="PaperStacks" unique_id=1883522064]
+position = Vector2(972, 485)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps23" unique_id=1881728102]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps23" unique_id=548154390]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps24" type="StaticBody2D" parent="PaperStacks" unique_id=1579787560]
+position = Vector2(607, 487)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps24" unique_id=1132221348]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps24" unique_id=2038916274]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps25" type="StaticBody2D" parent="PaperStacks" unique_id=249411270]
+position = Vector2(1094, 488)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps25" unique_id=1912835899]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps25" unique_id=2131132074]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps26" type="StaticBody2D" parent="PaperStacks" unique_id=1831409428]
+position = Vector2(1094, 362)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps26" unique_id=885849803]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps26" unique_id=1526437200]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps27" type="StaticBody2D" parent="PaperStacks" unique_id=521355548]
+position = Vector2(1090, 236)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps27" unique_id=1179127486]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps27" unique_id=2107292515]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps28" type="StaticBody2D" parent="PaperStacks" unique_id=1019668920]
+position = Vector2(851, 488)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps28" unique_id=80425397]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps28" unique_id=1513702286]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps29" type="StaticBody2D" parent="PaperStacks" unique_id=984805339]
+position = Vector2(851, 362)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps29" unique_id=164163124]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps29" unique_id=653036730]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps30" type="StaticBody2D" parent="PaperStacks" unique_id=1063509171]
+position = Vector2(727, 486)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps30" unique_id=1102456916]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps30" unique_id=954764395]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps31" type="StaticBody2D" parent="PaperStacks" unique_id=208592730]
+position = Vector2(481, 488)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps31" unique_id=1586714995]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps31" unique_id=1214626756]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps32" type="StaticBody2D" parent="PaperStacks" unique_id=691632363]
+position = Vector2(1207, 362)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps32" unique_id=533631199]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps32" unique_id=805604899]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps33" type="StaticBody2D" parent="PaperStacks" unique_id=931214773]
+position = Vector2(1215, 486)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps33" unique_id=1062881797]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps33" unique_id=991764596]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps34" type="StaticBody2D" parent="PaperStacks" unique_id=886809953]
+position = Vector2(-70, 487)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps34" unique_id=1254094262]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps34" unique_id=1403553532]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps35" type="StaticBody2D" parent="PaperStacks" unique_id=908881739]
+position = Vector2(32, 488)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps35" unique_id=404520077]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps35" unique_id=1156038136]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="ps36" type="StaticBody2D" parent="PaperStacks" unique_id=1177456175]
+position = Vector2(-13, 362)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStacks/ps36" unique_id=476404448]
+position = Vector2(1.75, -4)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Sprite2D" type="Sprite2D" parent="PaperStacks/ps36" unique_id=1782248468]
+position = Vector2(3.0000029, -0.9999695)
+scale = Vector2(2.65625, 2.65625)
+texture = ExtResource("5_gkyhe")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1634089264]
+scale = Vector2(5, 5)
+tile_map_data = PackedByteArray("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")
+tile_set = SubResource("TileSet_kek77")

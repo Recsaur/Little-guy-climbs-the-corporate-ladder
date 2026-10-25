@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://04ldy5yu8ino"]
+
+[ext_resource type="Texture2D" uid="uid://7lnewdwkg8k" path="res://assets/coffeemug.png" id="1_875nn"]
+
+[node name="watercup" type="Sprite2D" unique_id=1311918160]
+position = Vector2(20, 0)
+scale = Vector2(4, 4)
+texture = ExtResource("1_875nn")

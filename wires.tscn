@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://baiv3vobp4xcm"]
+
+[ext_resource type="Script" uid="uid://dusu0uh8qjokm" path="res://wires.gd" id="1_gw8pa"]
+[ext_resource type="PackedScene" uid="uid://bjkc1l8k608e6" path="res://root.tscn" id="1_ptv7e"]
+[ext_resource type="PackedScene" uid="uid://cb0uv7xx72sm7" path="res://root2.tscn" id="2_jejd5"]
+[ext_resource type="PackedScene" uid="uid://yjpkk28614lw" path="res://root3.tscn" id="3_gw8pa"]
+[ext_resource type="PackedScene" uid="uid://bw3doddry0c4y" path="res://root4.tscn" id="4_xatk8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uytt6"]
+size = Vector2(40.48075, 41.322548)
+
+[node name="Wires" type="Node2D" unique_id=38574379]
+script = ExtResource("1_gw8pa")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=281300569]
+offset_left = 222.0
+offset_top = 70.0
+offset_right = 942.0
+offset_bottom = 591.0
+color = Color(0.103743516, 0.103743546, 0.10374347, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1125819000]
+offset_left = 821.0001
+offset_top = 119.000015
+offset_right = 861.0001
+offset_bottom = 159.00002
+scale = Vector2(2.985491, 1.6601465)
+color = Color(0.6901961, 0.08235294, 0.22352941, 1)
+
+[node name="red" type="Area2D" parent="ColorRect2" unique_id=1240868395]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect2/red" unique_id=1303734865]
+position = Vector2(19.954025, 19.69661)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_uytt6")
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1424256942]
+offset_left = 821.0001
+offset_top = 240.00003
+offset_right = 861.0001
+offset_bottom = 280.00003
+scale = Vector2(2.985491, 1.6601465)
+color = Color(1, 1, 0.54509807, 1)
+
+[node name="yellow" type="Area2D" parent="ColorRect3" unique_id=277513684]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect3/yellow" unique_id=1959458840]
+position = Vector2(19.954025, 19.69661)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_uytt6")
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=122189371]
+offset_left = 821.0001
+offset_top = 354.00006
+offset_right = 861.0001
+offset_bottom = 394.00006
+scale = Vector2(2.985491, 1.6601465)
+color = Color(0.34901962, 0.60784316, 0.21176471, 1)
+
+[node name="green" type="Area2D" parent="ColorRect4" unique_id=944292183]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect4/green" unique_id=290466637]
+position = Vector2(19.954025, 19.69661)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_uytt6")
+
+[node name="blu" type="ColorRect" parent="." unique_id=1678868628]
+offset_left = 821.0001
+offset_top = 467.00006
+offset_right = 861.0001
+offset_bottom = 507.00006
+scale = Vector2(2.985491, 1.6601465)
+color = Color(0.06666667, 0.50980395, 0.9411765, 1)
+
+[node name="blue" type="Area2D" parent="blu" unique_id=2087123976]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blu/blue" unique_id=580219645]
+position = Vector2(19.954025, 19.69661)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_uytt6")
+
+[node name="Root" parent="." unique_id=632057737 instance=ExtResource("1_ptv7e")]
+position = Vector2(245, 267)
+
+[node name="Root2" parent="." unique_id=1478364923 instance=ExtResource("2_jejd5")]
+position = Vector2(257, 531)
+
+[node name="Root3" parent="." unique_id=875613346 instance=ExtResource("3_gw8pa")]
+position = Vector2(259, 407)
+
+[node name="Root4" parent="." unique_id=1123625645 instance=ExtResource("4_xatk8")]
+position = Vector2(246, 125)
+
+[connection signal="area_entered" from="ColorRect2/red" to="." method="_on_red_area_entered"]
+[connection signal="area_exited" from="ColorRect2/red" to="." method="_on_red_area_exited"]
+[connection signal="area_entered" from="ColorRect3/yellow" to="." method="_on_yellow_area_entered"]
+[connection signal="area_exited" from="ColorRect3/yellow" to="." method="_on_yellow_area_exited"]
+[connection signal="area_entered" from="ColorRect4/green" to="." method="_on_green_area_entered"]
+[connection signal="area_exited" from="ColorRect4/green" to="." method="_on_green_area_exited"]
+[connection signal="area_entered" from="blu/blue" to="." method="_on_blue_area_entered"]
+[connection signal="area_exited" from="blu/blue" to="." method="_on_blue_area_exited"]

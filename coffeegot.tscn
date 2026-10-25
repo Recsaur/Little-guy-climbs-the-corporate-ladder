@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://beb01rrs3xy64"]
+
+[ext_resource type="Texture2D" uid="uid://7lnewdwkg8k" path="res://assets/coffeemug.png" id="1_kyb1y"]
+
+[node name="Coffee" type="Sprite2D" unique_id=1005285425]
+position = Vector2(14.999996, -12.000004)
+scale = Vector2(4, 4)
+texture = ExtResource("1_kyb1y")

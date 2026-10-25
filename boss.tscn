@@ -1,17 +1,64 @@
 [gd_scene format=3 uid="uid://dgurjx1tdkw7e"]
 
-[ext_resource type="Texture2D" uid="uid://nctjwvdstyng" path="res://icon.svg" id="1_0bnu1"]
+[ext_resource type="Script" uid="uid://42o2dct8j5v6" path="res://boss.gd" id="1_6xxrv"]
+[ext_resource type="Resource" uid="uid://ianeijkl6g7e" path="res://1_boss.dialogue" id="2_skx2t"]
+[ext_resource type="Resource" uid="uid://d3u3pcvrnq8qa" path="res://2_boss.dialogue" id="3_lnbgr"]
+[ext_resource type="Resource" uid="uid://daqol8po6g6h3" path="res://3_boss.dialogue" id="4_o1i15"]
+[ext_resource type="Texture2D" uid="uid://dmk5k6i6nc3v" path="res://assets/boss2d.png" id="5_o1i15"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_we8h1"]
+atlas = ExtResource("5_o1i15")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvofc"]
+atlas = ExtResource("5_o1i15")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ef0k6"]
+atlas = ExtResource("5_o1i15")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ry61v"]
+atlas = ExtResource("5_o1i15")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kles1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_we8h1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvofc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ef0k6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ry61v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bnu1"]
-size = Vector2(384.5, 202.25)
+size = Vector2(677, 369)
 
 [node name="Boss" type="Node2D" unique_id=1731412138]
+script = ExtResource("1_6xxrv")
+dialogue1 = ExtResource("2_skx2t")
+dialogue2 = ExtResource("3_lnbgr")
+dialogue3 = ExtResource("4_o1i15")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=693858678]
-texture = ExtResource("1_0bnu1")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=576295436]
+scale = Vector2(4.28125, 4.28125)
+sprite_frames = SubResource("SpriteFrames_kles1")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=893257092]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1747426573]
-position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_0bnu1")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

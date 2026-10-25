@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://yjpkk28614lw"]
+
+[ext_resource type="Texture2D" uid="uid://bk7asrm4h1iwg" path="res://assets/root.png" id="1_nmd0y"]
+[ext_resource type="Script" uid="uid://dulcdykggn3a6" path="res://scenes/line_2d.gd" id="2_re3mp"]
+[ext_resource type="Texture2D" uid="uid://bpi88skqnrgdk" path="res://assets/roottip.png" id="3_rglbs"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jh1ax"]
+
+[sub_resource type="Curve" id="Curve_kycxp"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_twpsu"]
+radius = 27.166155
+
+[node name="Root" type="Node2D" unique_id=632057737 groups=["green"]]
+modulate = Color(1.1556519, 3.2217984, 2.3537724, 1)
+
+[node name="Line2D" type="Line2D" parent="." unique_id=237383633]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_jh1ax")
+position = Vector2(-9.536743e-07, 4.7683716e-07)
+scale = Vector2(5.5, 5.5)
+points = PackedVector2Array(13.818181, 13.636363, 20.545454, 15.090908, 22.545454, 25.999998, 13.272727, 33.272724, 20.363636, 42.727272, 29.636362, 36.545452, 41.090908, 25.090908, 44.363632, 9.272727, 21.454544, 5.090909, 8.90909, 2.9090908)
+width_curve = SubResource("Curve_kycxp")
+texture = ExtResource("1_nmd0y")
+texture_mode = 1
+joint_mode = 2
+begin_cap_mode = 1
+end_cap_mode = 1
+script = ExtResource("2_re3mp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=660614723]
+position = Vector2(1.1920929e-07, 5.684342e-14)
+scale = Vector2(1.71875, 1.71875)
+texture = ExtResource("3_rglbs")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=645948781 groups=["root"]]
+position = Vector2(-6.935813e-08, -3.3072534e-14)
+scale = Vector2(0.58181816, 0.58181816)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=1704345092]
+shape = SubResource("CircleShape2D_twpsu")
